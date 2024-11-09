@@ -51,6 +51,16 @@
                             <p class="text-gray-900 text-base font-medium">{{ childlink.title }}</p>
                           </div>
                         </a>
+
+                        {% comment %} 
+                        <!-- For menu item level 2 -->
+                        {% if childlink.links != blank %}
+                          {% for child2link in childlink.links %}
+                            {{ child2link.title }}
+                          {% endfor %}
+                        {% endif %}
+                        
+                        {% endcomment %}
                       {% endfor %}
                     </div>
                   </div>
@@ -164,6 +174,6 @@
         "info": "Add links to your header menu",
         "default": "main-menu"
       }
-    ], 
+    ]
   }
 {% endschema %}

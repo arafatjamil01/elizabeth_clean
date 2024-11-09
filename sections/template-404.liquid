@@ -1,0 +1,31 @@
+{% comment %} 
+
+ <h1>{{ 'general.404.title' | t }}</h1>
+<p>{{ 'general.404.subtext_html' | t }}</p> 
+
+{% endcomment %}
+
+<h1>{{ section.settings.title }}</h1>
+<p>{{ section.settings.subtext }}</p>
+
+{% schema %}
+    {
+        "name": "Template 404",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "404 heading title",
+                "default": "404 - Not found"
+            },
+            {
+                "type": "text",
+                "id": "subtext",
+                "label": "Subtext",
+                "default": "The page you are trying to visit, is not found"
+            }
+        ]
+
+        
+    }
+{% endschema %}
